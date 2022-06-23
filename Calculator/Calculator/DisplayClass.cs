@@ -13,7 +13,7 @@ namespace Calculator
         public static void CallMainMenu()
         {
             Console.WriteLine(
-                                "\nPress + for multiplication\n" +
+                                "\nPress + for Addition\n" +
                                 "Press - for Subtraction\n" +
                                 "Press * for Multiplication\n" +
                                 "Press / for Division\n" +
