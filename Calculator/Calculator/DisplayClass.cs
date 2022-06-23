@@ -33,9 +33,9 @@ namespace Calculator
         public static void CallCanNotDivideByZero()
         {
             Console.WriteLine(
-                        "One ore more of your enterd values are = 0\n" +
+                        "You can not divide with 0!\n" +
                         "Please enter 2 new values");
-        }
-
+        }       
+        
     }
 }
