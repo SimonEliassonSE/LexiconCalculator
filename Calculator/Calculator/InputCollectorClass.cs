@@ -9,6 +9,23 @@ namespace Calculator
     internal class InputCollectorClass
     {
 
+        public static bool GetBoolFromUser()
+        {
+            bool goAgain = true;
+            Console.WriteLine("Enter [yes] to start over, or [no] to return to main menu");
+            string userInput = GetStringFromUser();
+            if (userInput == "yes")
+            {
+                goAgain = true; 
+            }
+            else if (userInput == "no")
+            {
+                goAgain = false;    
+            }
+            
+            return goAgain;
+        }
+
         public static string GetStringFromUser()
         {
             string userString;

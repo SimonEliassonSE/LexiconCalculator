@@ -15,6 +15,33 @@ namespace Calculator
             return result;
         }
 
+        public static decimal DoAdvancedAddition()
+        {
+            bool displayValue = false;
+            decimal result = 0;
+            decimal num;
+            string input;
+            do
+            {
+                input = InputCollectorClass.GetStringFromUser();
+                if(input == "=")
+                {
+                    displayValue = true;
+                   
+                }
+                else 
+                {
+                    decimal.TryParse(input, out num);
+                    result = (result + num);
+                    
+                }
+                
+
+            }
+            while (!displayValue);
+            return result;
+        }
+
         public static decimal DoSubtraction(decimal num1, decimal num2)
         {
             // Byte från double till decimal då doubble hade precisions problem (float?)

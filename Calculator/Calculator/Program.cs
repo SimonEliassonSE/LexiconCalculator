@@ -19,14 +19,26 @@ while (isActive == true) // Täcker hela pogramet, om false = Exit
     {
 
         case "+":
-            {                
-                Console.Clear();                
-                Console.WriteLine("Please enter the 2 numbers to do Addition on");
-                decimal num1 = InputCollectorClass.GetDecimalFromUser();
-                decimal num2 = InputCollectorClass.GetDecimalFromUser();                
-                Console.WriteLine(CalculationMethodsClass.DoAddition(num1, num2));
-                DisplayClass.CallEndStatment();
+            { 
+                bool doAgain = false;
+                do {
+                    string menuChoice = DisplayClass.BasicOrAdvancedText();
+                    if (menuChoice == "1")
+                    {
+                        DisplayClass.BasicAdditionDisplay();
+                        doAgain = InputCollectorClass.GetBoolFromUser();
+                        
+                    }
 
+                    else if (menuChoice == "2")
+                    {
+                        DisplayClass.AdvancedAdditionDisplay();
+                        doAgain = InputCollectorClass.GetBoolFromUser();
+                        
+                        
+                    }
+                } while (doAgain); 
+                
                 break;
             }
 
