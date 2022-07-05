@@ -57,6 +57,26 @@ namespace Calculator.Tests
 
     public class DoDivisionTests
     {
+
+        [Fact]
+        public void DoDivisionZeroTest()
+        {
+
+            // Arrange
+            decimal num1 = 0;
+            decimal num2 = 0;
+            decimal expected = 0;
+
+            // Act
+            decimal actual = CalculationMethodsClass.DoDivision(num1, num2);
+
+
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+        }
+
         [Fact]
         public void DoDivisionNum1ZeroTest()
         {

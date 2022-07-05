@@ -4,17 +4,9 @@ bool isActive = true;
 
 while (isActive == true) // Täcker hela pogramet, om false = Exit
 {
-
-    // Lägg till functionalitet så att användaren kan välja att addera flera tal istället för 2
-        // Lägg till en metod som frågar om användaren vill räkna igen eller återgå till huvudmenyn
-          // Yterligare fördjupning, Låt vissa metoder fortsätta tills användren skriver = t.ex. 3 + 3 + 3 + 3 + 3 =
-
-
-
     DisplayClass.CallMainMenu(); // kallar på menyn      
     string userInput = InputCollectorClass.GetStringFromUser(); // callar på GetString Metoden och ger värdet till userInput 
     
-
     switch (userInput)
     {
 
