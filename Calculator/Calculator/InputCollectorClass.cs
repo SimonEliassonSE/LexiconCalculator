@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    internal class InputCollectorClass
+    public class InputCollectorClass
     {
 
         public static bool GetBoolFromUser()
@@ -40,17 +40,38 @@ namespace Calculator
 
         public static double GetDoubbleFromUser()
         {
-            string input = GetStringFromUser();
-            double num = 0;
-            double.TryParse(input, out num);
+            bool isNumeric;
+            double num;
+            do 
+            { 
+                string input = GetStringFromUser();
+                isNumeric = double.TryParse(input, out num);
+
+                if (isNumeric) 
+                    { return num; }
+                else { Console.WriteLine("The input was not correct, try again!(may not contain letters)"); }
+
+            } while (!isNumeric);
+
             return num;
         }
 
         public static decimal GetDecimalFromUser()
         {
-            string input = GetStringFromUser();
-            decimal num = 0;     
-            decimal.TryParse(input, out num);  
+            bool isNumeric;
+            decimal num;
+
+            do
+            {
+                string input = GetStringFromUser();                
+                isNumeric = decimal.TryParse(input, out num);
+                
+                if (isNumeric) 
+                    { return num; }
+                else { Console.WriteLine("The input was not correct, try again!(may not contain letters)"); }
+
+            } while (!isNumeric);
+
             return num;
         }
     }

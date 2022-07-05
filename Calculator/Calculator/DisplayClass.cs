@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    internal class DisplayClass
+    public class DisplayClass
     {
 
 
@@ -27,7 +27,7 @@ namespace Calculator
 
         public static void CallEndStatment()
         {
-            Console.WriteLine("\n\n Press any key to return to main menu");
+            Console.WriteLine("\n\nPress any key to return to main menu");
             Console.ReadLine();
         }
         public static string BasicOrAdvancedText()

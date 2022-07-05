@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "weiZImi3N2l/lVSRkw1mT/0tnxLM5gp1I/xZMXkkHgq+fje4OSB7mubWHZNoY9mhzS8niW0qpTs+0H7mOXRtcg==",
+  "dgSpecHash": "rimq2Db25DkGGQpVP5Ctkit4d5UERJ4IXf2KVHc+Dil50YbUU5FsNf2H+dLn5GTyosdXU3EC8qqzRNdGULKTfQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elias\\Desktop\\Lexicon studier\\LexiconProjekt\\LexiconCalculator\\Calculator\\Calculator\\Calculator.csproj",
+  "projectFilePath": "L:\\C# Projects\\LexiconCalculator.Test\\LexiconCalculator\\Calculator\\Calculator\\Calculator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

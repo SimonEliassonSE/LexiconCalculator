@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elias\\Desktop\\Lexicon studier\\LexiconProjekt\\LexiconCalculator\\Calculator\\Calculator\\Calculator.csproj": {}
+    "L:\\C# Projects\\LexiconCalculator.Test\\LexiconCalculator\\Calculator\\Calculator\\Calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elias\\Desktop\\Lexicon studier\\LexiconProjekt\\LexiconCalculator\\Calculator\\Calculator\\Calculator.csproj": {
+    "L:\\C# Projects\\LexiconCalculator.Test\\LexiconCalculator\\Calculator\\Calculator\\Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elias\\Desktop\\Lexicon studier\\LexiconProjekt\\LexiconCalculator\\Calculator\\Calculator\\Calculator.csproj",
+        "projectUniqueName": "L:\\C# Projects\\LexiconCalculator.Test\\LexiconCalculator\\Calculator\\Calculator\\Calculator.csproj",
         "projectName": "Calculator",
-        "projectPath": "C:\\Users\\elias\\Desktop\\Lexicon studier\\LexiconProjekt\\LexiconCalculator\\Calculator\\Calculator\\Calculator.csproj",
+        "projectPath": "L:\\C# Projects\\LexiconCalculator.Test\\LexiconCalculator\\Calculator\\Calculator\\Calculator.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elias\\Desktop\\Lexicon studier\\LexiconProjekt\\LexiconCalculator\\Calculator\\Calculator\\obj\\",
+        "outputPath": "L:\\C# Projects\\LexiconCalculator.Test\\LexiconCalculator\\Calculator\\Calculator\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
           "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

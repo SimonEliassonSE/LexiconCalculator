@@ -59,26 +59,12 @@ while (isActive == true) // Täcker hela pogramet, om false = Exit
             {   
                 Console.Clear();
                 Console.WriteLine("Please enter the 2 numbers to do Division on");
-
-                bool isNotZero = false;
-                while (isNotZero == false)
-                {
-                    decimal num1 = InputCollectorClass.GetDecimalFromUser();
-                    decimal num2 = InputCollectorClass.GetDecimalFromUser();
-
-                    if (num1 == 0 || num2 == 0)
-                    {
-                        DisplayClass.CallCanNotDivideByZero();
-                    }
-
-                    else
-                    {
-                        isNotZero = true;
-                        Console.WriteLine(CalculationMethodsClass.DoDivision(num1, num2));
-                        DisplayClass.CallEndStatment();
-                        break;
-                    }
-                }
+                //decimal result = LogicLayer.PreventDivisonByZeroAndReturnResult();
+                decimal num1 = InputCollectorClass.GetDecimalFromUser();
+                decimal num2 = InputCollectorClass.GetDecimalFromUser();
+                decimal result = CalculationMethodsClass.DoDivision(num1, num2);
+                Console.WriteLine(result);
+                DisplayClass.CallEndStatment();
                 break;
             }
 

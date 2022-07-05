@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    internal class CalculationMethodsClass
+    public class CalculationMethodsClass
     {
 
         public static decimal DoAddition(decimal num1, decimal num2)
@@ -42,6 +42,8 @@ namespace Calculator
             return result;
         }
 
+       
+
         public static decimal DoSubtraction(decimal num1, decimal num2)
         {
             // Byte från double till decimal då doubble hade precisions problem (float?)
@@ -59,7 +61,20 @@ namespace Calculator
 
         public static decimal DoDivision(decimal num1, decimal num2)
         {
-            decimal result = (num1 / num2);
+            decimal result = 0;
+            
+            if (num1 == 0)
+            {
+                return 0;
+            }
+
+            else if (num2 == 0)
+            {
+                return num1;
+            }
+            
+            else { result = (num1 / num2); }
+
             return result;
         }
 
