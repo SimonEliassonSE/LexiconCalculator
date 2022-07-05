@@ -32,6 +32,7 @@ namespace Calculator
                 else 
                 {
                     num = InputCollectorClass.GetDecimalFromUser();
+                    
                     result = (result + num);
                     
                 }
@@ -40,9 +41,7 @@ namespace Calculator
             }
             while (!displayValue);
             return result;
-        }
-
-       
+        }       
 
         public static decimal DoSubtraction(decimal num1, decimal num2)
         {
@@ -61,7 +60,7 @@ namespace Calculator
 
         public static decimal DoDivision(decimal num1, decimal num2)
         {
-            decimal result = 0;
+            decimal result;
             
             if (num1 == 0)
             {
@@ -87,8 +86,9 @@ namespace Calculator
 
         public static double DoPowerOf(double num1, double num2)
         {
-
-            double result = Math.Pow(num1, num2);
+            
+            
+            double result = Math.Pow(num1, num2);                          
             return result;
         }
 

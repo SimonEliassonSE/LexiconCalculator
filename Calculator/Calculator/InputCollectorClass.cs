@@ -28,11 +28,27 @@ namespace Calculator
 
         public static string GetStringFromUser()
         {
+
             string userString;
+            
             do
             {                
               userString = Console.ReadLine().ToLower();
+                if (string.IsNullOrEmpty(userString))
+                {
+                    bool isNullOrEmpty = true;
+                    InputAccepted(isNullOrEmpty);
+
+                }
+
+                else if (!string.IsNullOrEmpty(userString))
+                {
+                    bool isNullOrEmpty = false;
+                    InputAccepted(isNullOrEmpty);
+                }
+
             } while (string.IsNullOrWhiteSpace(userString));
+
             return userString;
               
 
@@ -50,6 +66,8 @@ namespace Calculator
                 if (isNumeric) 
                     { return num; }
                 else { Console.WriteLine("The input was not correct, try again!(may not contain letters)"); }
+
+
 
             } while (!isNumeric);
 
@@ -74,5 +92,13 @@ namespace Calculator
 
             return num;
         }
+
+        public static bool InputAccepted(bool setBool)
+        {
+            bool inputStatus = setBool;
+            return inputStatus;
+        }
+
+
     }
 }

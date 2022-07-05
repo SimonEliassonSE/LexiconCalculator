@@ -133,7 +133,7 @@ namespace Calculator.Tests
             Assert.Equal(expected, actual);
 
         }
-    } 
+    }
 
     public class DoSubtractionTests
     {
@@ -245,7 +245,7 @@ namespace Calculator.Tests
             decimal expected = 100;
 
             // Act
-            decimal actual = CalculationMethodsClass.DoMultiplication(num1, num2);  
+            decimal actual = CalculationMethodsClass.DoMultiplication(num1, num2);
 
 
 
@@ -408,6 +408,7 @@ namespace Calculator.Tests
 
     public class DoPowerOfTests
     {
+        [Fact]
         public void Do10PowerOf2Test()
         {
 
@@ -426,13 +427,14 @@ namespace Calculator.Tests
 
         }
 
+        [Fact]
         public void DoPowerOfZeroTest()
         {
-
+            // Apperently 0 to the power of 0 is 1 according to google/wiki so seems correct 
             // Arrange
             double num1 = 0;
             double num2 = 0;
-            double expected = 0;
+            double expected = 1;
 
             // Act
             double actual = CalculationMethodsClass.DoPowerOf(num1, num2);
@@ -444,6 +446,7 @@ namespace Calculator.Tests
 
         }
 
+        [Fact]
         public void DoPowerOfNum1ZeroTest()
         {
 
@@ -462,22 +465,42 @@ namespace Calculator.Tests
 
         }
 
+        [Fact]
         public void DoPowerOfNum2ZeroTest()
         {
 
             // Arrange
             double num1 = 10;
             double num2 = 0;
-            double expected = 0;
+            double expected = 1;
 
             // Act
-            double actual = CalculationMethodsClass.DoPowerOf (num1, num2);
-
-
+            double actual = CalculationMethodsClass.DoPowerOf(num1, num2);
 
             // Assert
             Assert.Equal(expected, actual);
 
         }
     }
+
+    
+    public class DoStringInputTest
+    {
+        //[Fact]
+        public void StringIsNullTest()
+        {
+            //Arrange
+
+
+            //Act
+
+
+
+            //Assert 
+
+            // https://makolyte.com/csharp-how-to-unit-test-code-that-reads-and-writes-to-the-console/
+        }
+    }
+
+    
 }
