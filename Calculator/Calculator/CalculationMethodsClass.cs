@@ -31,7 +31,7 @@ namespace Calculator
                 }
                 else 
                 {
-                    decimal.TryParse(input, out num);
+                    num = InputCollectorClass.GetDecimalFromUser();
                     result = (result + num);
                     
                 }

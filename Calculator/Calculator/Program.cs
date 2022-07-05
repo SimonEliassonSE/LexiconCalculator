@@ -62,8 +62,7 @@ while (isActive == true) // Täcker hela pogramet, om false = Exit
                 //decimal result = LogicLayer.PreventDivisonByZeroAndReturnResult();
                 decimal num1 = InputCollectorClass.GetDecimalFromUser();
                 decimal num2 = InputCollectorClass.GetDecimalFromUser();
-                decimal result = CalculationMethodsClass.DoDivision(num1, num2);
-                Console.WriteLine(result);
+                Console.WriteLine(CalculationMethodsClass.DoDivision(num1, num2));
                 DisplayClass.CallEndStatment();
                 break;
             }
