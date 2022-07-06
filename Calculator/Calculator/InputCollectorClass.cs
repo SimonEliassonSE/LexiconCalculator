@@ -12,17 +12,20 @@ namespace Calculator
         public static bool GetBoolFromUser()
         {
             bool goAgain = true;
-            Console.WriteLine("Enter [yes] to start over, or [no] to return to main menu");
-            string userInput = GetStringFromUser();
-            if (userInput == "yes")
+            string userInput;
+            do
             {
-                goAgain = true; 
-            }
-            else if (userInput == "no")
-            {
-                goAgain = false;    
-            }
-            
+                Console.WriteLine("Enter [yes] to start over, or [no] to return to main menu");
+                userInput = GetStringFromUser();
+                if (userInput == "yes")
+                {
+                    goAgain = true;
+                }
+                else if (userInput == "no")
+                {
+                    goAgain = false;
+                }
+            } while (userInput != "yes" && userInput != "no");
             return goAgain;
         }
 
@@ -37,14 +40,14 @@ namespace Calculator
                 if (string.IsNullOrEmpty(userString))
                 {
                     bool isNullOrEmpty = true;
-                    InputAccepted(isNullOrEmpty);
+                    InputAccepted(isNullOrEmpty); // for unit testing
 
                 }
 
                 else if (!string.IsNullOrEmpty(userString))
                 {
                     bool isNullOrEmpty = false;
-                    InputAccepted(isNullOrEmpty);
+                    InputAccepted(isNullOrEmpty); // for unit testing
                 }
 
             } while (string.IsNullOrWhiteSpace(userString));
@@ -93,7 +96,32 @@ namespace Calculator
             return num;
         }
 
-        public static bool InputAccepted(bool setBool)
+        public static decimal TryParseStringToDecimal(string userInput)
+        {
+            bool isNumeric;
+            decimal num;
+            string input = userInput;
+
+            do
+            {
+                
+                isNumeric = decimal.TryParse(input, out num);
+
+                if (isNumeric)
+                { return num; }
+
+                else 
+                { 
+                    Console.WriteLine("The input was not correct, try again!(may not contain letters)");
+                    input = InputCollectorClass.GetStringFromUser();
+                }
+
+            } while (!isNumeric);
+
+            return num;
+        }
+
+        public static bool InputAccepted(bool setBool) //For unit testing, sending a true oor false back to test to see weith er the input was accepted or not
         {
             bool inputStatus = setBool;
             return inputStatus;

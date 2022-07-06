@@ -4,6 +4,7 @@ bool isActive = true;
 
 while (isActive == true) // Täcker hela pogramet, om false = Exit
 {
+
     DisplayClass.CallMainMenu(); // kallar på menyn      
     string userInput = InputCollectorClass.GetStringFromUser(); // callar på GetString Metoden och ger värdet till userInput 
     
@@ -14,7 +15,7 @@ while (isActive == true) // Täcker hela pogramet, om false = Exit
             { 
                 bool doAgain = false;
                 do {
-                    string menuChoice = DisplayClass.BasicOrAdvancedText();
+                    string menuChoice = DisplayClass.BasicOrAdvancedText(userInput);
                     if (menuChoice == "1")
                     {
                         DisplayClass.BasicAdditionDisplay();
@@ -37,58 +38,92 @@ while (isActive == true) // Täcker hela pogramet, om false = Exit
 
         case "-":
             {
-                Console.Clear();
-                Console.WriteLine("Please enter the 2 numbers to do Subtraction on");
-                decimal num1 = InputCollectorClass.GetDecimalFromUser();
-                decimal num2 = InputCollectorClass.GetDecimalFromUser();
-                Console.WriteLine(CalculationMethodsClass.DoSubtraction(num1, num2));
-                DisplayClass.CallEndStatment();
+                bool doAgain = false;
+                do
+                {
+                    string menuChoice = DisplayClass.BasicOrAdvancedText(userInput);
+                    if (menuChoice == "1")
+                    {
+                        DisplayClass.BasicSubtractionDisplay();
+                        doAgain = InputCollectorClass.GetBoolFromUser();
+                    }
 
+                    else if (menuChoice == "2")
+                    {
+                        DisplayClass.AdvancedSubtractionDisplay();
+                        doAgain = InputCollectorClass.GetBoolFromUser();
+                    }
+
+                } while (doAgain);                                
+               
                 break;
             }
 
         case "/":
-            {   
-                Console.Clear();
-                Console.WriteLine("Please enter the 2 numbers to do Division on");
-                //decimal result = LogicLayer.PreventDivisonByZeroAndReturnResult();
-                decimal num1 = InputCollectorClass.GetDecimalFromUser();
-                decimal num2 = InputCollectorClass.GetDecimalFromUser();
-                Console.WriteLine(CalculationMethodsClass.DoDivision(num1, num2));
-                DisplayClass.CallEndStatment();
+            {
+                bool doAgain = false;
+                do 
+                {
+                    string menuChoice = DisplayClass.BasicOrAdvancedWithNoArray(userInput);
+                    if (menuChoice == "1")
+                    {
+                        DisplayClass.BasicDivisionDisplay();
+                        doAgain = InputCollectorClass.GetBoolFromUser();
+                    }
+
+                    else if (menuChoice == "2")
+                    {
+                        DisplayClass.AdvancedDivisionDisplay();
+                        doAgain = InputCollectorClass.GetBoolFromUser();
+                    }
+
+                } while (doAgain);
+
                 break;
             }
 
         case "*":
             {
-                Console.Clear();
-                Console.WriteLine("Please enter the 2 numbers to do Multiplication on");
-                decimal num1 = InputCollectorClass.GetDecimalFromUser();
-                decimal num2 = InputCollectorClass.GetDecimalFromUser();
-                Console.WriteLine(CalculationMethodsClass.DoMultiplication(num1, num2));
-                DisplayClass.CallEndStatment();
+                bool doAgain = false;
+                do
+                {
+                    string menuChoice = DisplayClass.BasicOrAdvancedWithNoArray(userInput);
+                    if (menuChoice == "1")
+                    {
+                        DisplayClass.BasicMultiplicationDisplay();
+                        doAgain = InputCollectorClass.GetBoolFromUser();
+                    }
+
+                    else if (menuChoice == "2")
+                    {
+                        DisplayClass.AdvancedMultiplicationDisplay();
+                        doAgain = InputCollectorClass.GetBoolFromUser();
+                    }
+
+                } while (doAgain);
 
                 break;
             }
         case "square":
             {
-                Console.Clear();
-                Console.WriteLine("Please enter a value to calculate");
-                double num1 = InputCollectorClass.GetDoubbleFromUser();
-                Console.WriteLine(CalculationMethodsClass.DoSquareRoot(num1));
-                DisplayClass.CallEndStatment();
+                bool doAgain = false;
+                do 
+                {
+                    DisplayClass.BasicSquareRootDisplay();
+                    doAgain = InputCollectorClass.GetBoolFromUser();
+                } while (doAgain);
 
                 break;
             }
 
         case "power":
             {
-                Console.Clear();
-                Console.WriteLine("Please enter 2 values, first power of second to calculate");
-                double num1 = InputCollectorClass.GetDoubbleFromUser();
-                double num2 = InputCollectorClass.GetDoubbleFromUser();
-                Console.WriteLine(CalculationMethodsClass.DoPowerOf(num1, num2));
-                DisplayClass.CallEndStatment();
+                bool doAgain = false;
+                do
+                {
+                    DisplayClass.BasicPowerOfDisplay();
+                    doAgain = InputCollectorClass.GetBoolFromUser();
+                } while (doAgain);
 
                 break;
             }
