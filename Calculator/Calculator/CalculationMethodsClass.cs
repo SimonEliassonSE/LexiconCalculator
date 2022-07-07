@@ -194,7 +194,7 @@ namespace Calculator
 
             else if (num2 == 0)
             {
-                return num1;
+                return 0;
             }
             
             else { result = (num1 / num2); }

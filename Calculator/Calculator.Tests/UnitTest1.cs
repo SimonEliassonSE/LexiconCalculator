@@ -6,7 +6,7 @@ namespace Calculator.Tests
     {
 
         [Fact]
-        public void AdditionTest()
+        public void DoAdditionTest()
         {
 
             // Arrange
@@ -22,7 +22,7 @@ namespace Calculator.Tests
 
         }
         [Fact]
-        public void AdditionNum1ZeroTest()
+        public void DoAdditionNum1ZeroTest()
         {
 
             // Arrange
@@ -38,7 +38,7 @@ namespace Calculator.Tests
 
         }
         [Fact]
-        public void AdditionNum2ZeroTest()
+        public void DoAdditionNum2ZeroTest()
         {
 
             // Arrange
@@ -48,6 +48,57 @@ namespace Calculator.Tests
 
             // Act
             decimal actual = CalculationMethodsClass.DoAddition(num1, num2);
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void DoAdditionArrayTest()
+        {
+
+            // Arrange
+            decimal[] testContainer = new decimal[5] { 10, 1, 1, 1, 2 };
+            decimal expected = 15;
+
+            // Act
+
+            CalculationMethodsClass calculationMethodsClass = new CalculationMethodsClass();
+            decimal actual = calculationMethodsClass.DoAddition(testContainer);
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void DoAdditionArrayWithZeroTest()
+        {
+
+            // Arrange
+            decimal[] testContainer = new decimal[5] { 10, 0, 0, 0, 2 };
+            decimal expected = 12;
+
+            // Act
+
+            CalculationMethodsClass calculationMethodsClass = new CalculationMethodsClass();
+            decimal actual = calculationMethodsClass.DoAddition(testContainer);
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void DoAdditionArrayOnlyZeroTest()
+        {
+
+            // Arrange
+            decimal[] testContainer = new decimal[5] { 0, 0, 0, 0, 0 };
+            decimal expected = 0;
+
+            // Act
+
+            CalculationMethodsClass calculationMethodsClass = new CalculationMethodsClass();
+            decimal actual = calculationMethodsClass.DoAddition(testContainer);
 
             // Assert
             Assert.Equal(expected, actual);
@@ -103,7 +154,7 @@ namespace Calculator.Tests
             // Arrange
             decimal num1 = 10;
             decimal num2 = 0;
-            decimal expected = 10;
+            decimal expected = 0;
 
             // Act
             decimal actual = CalculationMethodsClass.DoDivision(num1, num2);
@@ -226,6 +277,57 @@ namespace Calculator.Tests
             decimal actual = CalculationMethodsClass.DoSubtraction(num1, num2);
 
 
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void DoSubtractionArrayTest()
+        {
+
+            // Arrange
+            decimal[] testContainer = new decimal[5] { 10, 1, 1, 1, 2 };
+            decimal expected = 5;
+
+            // Act
+
+            CalculationMethodsClass calculationMethodsClass = new CalculationMethodsClass();
+            decimal actual = calculationMethodsClass.DoSubtraction(testContainer);
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void DoSubtractionArrayWithZeroTest()
+        {
+
+            // Arrange
+            decimal[] testContainer = new decimal[5] { 10, 0, 0, 0, 2 };
+            decimal expected = 8;
+
+            // Act
+
+            CalculationMethodsClass calculationMethodsClass = new CalculationMethodsClass();
+            decimal actual = calculationMethodsClass.DoSubtraction(testContainer);
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void DoSubtractionArrayOnlyZeroTest()
+        {
+
+            // Arrange
+            decimal[] testContainer = new decimal[5] { 0, 0, 0, 0, 0 };
+            decimal expected = 0;
+
+            // Act
+
+            CalculationMethodsClass calculationMethodsClass = new CalculationMethodsClass();
+            decimal actual = calculationMethodsClass.DoSubtraction(testContainer);
 
             // Assert
             Assert.Equal(expected, actual);
@@ -482,7 +584,6 @@ namespace Calculator.Tests
 
         }
     }
-
     
     public class DoStringInputTest
     {
