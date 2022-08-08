@@ -121,7 +121,7 @@ namespace Calculator
             return num;
         }
 
-        public static bool InputAccepted(bool setBool) //For unit testing, sending a true oor false back to test to see weith er the input was accepted or not
+        public static bool InputAccepted(bool setBool) //For unit testing, sending a true oor false back to test to see if the input was accepted or not
         {
             bool inputStatus = setBool;
             return inputStatus;

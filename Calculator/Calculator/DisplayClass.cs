@@ -181,7 +181,8 @@ namespace Calculator
             else if (userInput == "several")
             {
                 Console.WriteLine("Please enter several numbers divded by [ , ]");
-                string num1 = InputCollectorClass.GetStringFromUser();
+               
+                string num1 = InputCollectorClass.GetStringFromUser();                
                 string[] stringContainter = num1.Split(',');
                 decimal[] decimalContainer = new decimal[stringContainter.Length];
                 for (int i = 0; i < stringContainter.Length; i++)

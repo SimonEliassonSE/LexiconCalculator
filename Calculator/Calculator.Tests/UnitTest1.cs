@@ -591,10 +591,9 @@ namespace Calculator.Tests
         public void StringIsNullTest()
         {
             //Arrange
-
+            
 
             //Act
-
 
 
             //Assert 

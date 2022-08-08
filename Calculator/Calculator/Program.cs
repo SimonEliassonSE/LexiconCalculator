@@ -143,7 +143,9 @@ while (isActive == true) // Täcker hela pogramet, om false = Exit
             {
                 // Retunerar användaren till huvudmenyn om något annat än case symbolerna är input t.ex. Abba
                 Console.Clear();
-                Console.WriteLine("Wrong input");
+                Console.WriteLine("|-------------|\n" +
+                                  "| Wrong input |\n" +
+                                  "|-------------|\n");
                 break;
             }
 
